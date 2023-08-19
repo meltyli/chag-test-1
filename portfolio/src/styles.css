@@ -198,10 +198,6 @@ table {
     /* Center the content horizontally */
 }
 
-h1 {
-    font-size: 250%;
-}
-
 /* Footer styles */
 footer {
     text-align: center;
@@ -209,22 +205,21 @@ footer {
     width: 100%;
 }
 
-button {
-    background-color: var(--background-secondary-colour);
-    color: var(--background-secondary-colour);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.button {
     font-size: 1.2rem;
-    padding: 1rem;
-    margin: 5px;
+    margin: 1rem;
+    display: inline-block;
+    padding: 10px 30px; /* Top and bottom padding of 10px, left and right padding of 30px */
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
 }
 
-button:hover {
+.button:hover {
     background-color: black;
 }
 
-button:disabled {
+.button:disabled {
     background-color: #eee;
     color: #aaa;
     cursor: auto;
