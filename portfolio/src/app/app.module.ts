@@ -10,6 +10,7 @@ import { ServicesComponent } from './services/services.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoadingBarComponent } from './loading-bar/loading-bar.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoadingBarComponent } from './loading-bar/loading-bar.component';
     ServicesComponent,
     PortfolioComponent,
     ContactComponent,
-    LoadingBarComponent
+    LoadingBarComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
