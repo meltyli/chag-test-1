@@ -1,0 +1,19 @@
+/* Contains the colours of the light theme. */
+:root {
+    --primary-color: #000C42;
+    --accent-color: #161b33;
+    --title-color: var(--white);
+    --background-colour: var(--white);
+    --background-secondary-colour: var(--blue);
+    --background-tertiary-colour: #5C7AFF;
+    --nav-colour: var(--green);
+
+    
+    --yellow: #FCE792;
+    --green: #A6DDD0;
+    --pink: #FFBCC1;
+    --white: #f8f4ff;
+    --blue: #8299FF;
+
+    /* --dark-blue: #000C42; */
+}
