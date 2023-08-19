@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.css']
+  templateUrl: './projects.component.html',
+  styleUrls: ['./projects.component.css']
 })
 
-export class PortfolioComponent {
+export class ProjectsComponent {
   projects = [
     {
       id: 1,

@@ -78,14 +78,14 @@ h2 {
     border-radius: 5px;
 }
 
-/* Hero section styles */
+/* Hero section */
 .hero {
     text-align: center;
     padding: 150px 0;
     color: white;
 }
 
-/* About section styles */
+/* About section */
 .about {
     background-color: var(--background-colour);
     text-align: center;
@@ -97,17 +97,17 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Technologies section styles */
-.technologies {
+/* Skills section */
+.skills {
     padding: 100px 0;
 }
 
-.technology {
+.skill {
     text-align: center;
     margin-bottom: 30px;
 }
 
-/* Portfolio section styles */
+/* Portfolio section */
 .portfolio {
     padding: 100px 0;
     background-color: var(--background-secondary-colour);

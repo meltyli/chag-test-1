@@ -9,11 +9,12 @@
     --nav-colour: var(--green);
 
     
-    --yellow: #FCE792;
-    --green: #A6DDD0;
-    --pink: #FFBCC1;
-    --white: #f8f4ff;
-    --blue: #8299FF;
+    --yellow: #FCE792; /* Jasmine */
+    --green: #A6DDD0; /* Tiffany Blue */
+    --pink: #FFBCC1; /* Pink */
+    --white: #f8f4ff; /* Magnolia */
+    --blue: #8299FF; /* Vista Blue */
+    --l-blue: #C7D1FF; /* Periwinkle */
 
     /* --dark-blue: #000C42; */
 }

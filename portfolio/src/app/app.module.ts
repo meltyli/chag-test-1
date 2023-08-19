@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
-import { ServicesComponent } from './services/services.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
+import { SkillsComponent } from './skills/skills.component';
+import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoadingBarComponent } from './loading-bar/loading-bar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -18,8 +18,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HomeComponent,
     NavbarComponent,
     AboutComponent,
-    ServicesComponent,
-    PortfolioComponent,
+    SkillsComponent,
+    ProjectsComponent,
     ContactComponent,
     LoadingBarComponent,
     NotFoundComponent
