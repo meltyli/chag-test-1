@@ -1,13 +1,11 @@
-.logo {
-    font-size: 1.5rem;
-    margin-right: auto;
-    padding: 10px;
+@import 'src/assets/css/light-theme.css';
+
+div {
+    background-color: inherit;
 }
 
 .cta-button {
     display: inline-block;
-    background-color: #333;
-    color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -16,9 +14,8 @@
 }
 
 .cta-button:hover {
-    background-color: #555;
-    background-color: #444;
-    transform: scale(1.05);
+    /* background-color: #555; */
+    /* transform: scale(1.05); */
 }
 
 .hero h1 {
@@ -28,22 +25,44 @@
 }
 
 /* Features section styles */
+section {
+    height: 800px;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.short-section {
+    height: 300px;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
 .features {
+    background-color: var(--background-secondary-colour);
     display: flex;
+    height: auto;
     justify-content: space-around;
     padding: 50px 0;
-    background-color: white;
     flex-wrap: wrap;
 }
 
 .feature {
     text-align: center;
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 5px;
     max-width: 300px;
-    margin: 20px;
+    justify-content: space-around;
     flex: 1;
+    box-shadow: #0000001a 0px 5px 10px;
+    background-color: #c7d1ff46;
+}
+
+.feature p, h2 {
+    margin-top: 1rem;
+    color: var(--accent-color);
+    background-color: transparent;
 }
 
 .feature:hover {
@@ -55,12 +74,11 @@
 .feature-image {
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
 /* Hero section styles */
 .hero {
-    /* background-image: url('hero-bg.jpg'); */
-    background-size: cover;
     text-align: center;
     padding: 150px 0;
     color: white;
@@ -68,7 +86,7 @@
 
 /* About section styles */
 .about {
-    background-color: #f9f9f9;
+    background-color: var(--background-colour);
     text-align: center;
     padding: 100px 0;
 }
@@ -81,7 +99,6 @@
 /* Technologies section styles */
 .technologies {
     padding: 100px 0;
-    background-color: white;
 }
 
 .technology {
@@ -89,51 +106,62 @@
     margin-bottom: 30px;
 }
 
-.technology h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
 /* Portfolio section styles */
 .portfolio {
     padding: 100px 0;
-    background-color: #f9f9f9;
+    background-color: var(--background-secondary-colour);
     text-align: center;
 }
 
 .portfolio-item {
+    background-color: inherit;
     margin-bottom: 40px;
 }
 
 .portfolio-item img {
     max-width: 100%;
     height: auto;
-    border: 2px solid #ddd;
     border-radius: 5px;
 }
 
-.portfolio-item h3 {
-    font-size: 1.5rem;
-    margin-top: 10px;
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--title-color);
+    background-color: transparent;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--title-color);
+    background-color: transparent;
+}
+
+.feature h3 {
+    color: var(--title-color);
+}
+
+/* Alternate the section colours */
+.dark-section h1, .dark-section h2, .dark-section h3 {
+    color: var(--title-color);
+}
+
+.light-section h1, .light-section h2, .light-section h3 {
+    color: var(--blue);
 }
 
 /* Contact section styles */
 .contact {
     padding: 100px 0;
     text-align: center;
-    background-color: #333;
-    color: white;
-}
-
-.contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    background-color: var(--background-colour);
 }
 
 .contact-button {
+    background-color: var(--background-secondary-colour);
     display: inline-block;
-    background-color: #fff;
-    color: #333;
+    color: var(--white);
     padding: 10px 30px;
     border-radius: 5px;
     text-decoration: none;
@@ -147,7 +175,7 @@
 
 /* Intro section styles */
 .intro {
-    background-color: #f9f9f9;
+    background-color: var(--background-colour);
     text-align: center;
     padding: 100px 0;
 }
@@ -161,22 +189,15 @@
 .projects {
     padding: 100px 0;
     text-align: center;
-    background-color: white;
 }
 
 .project {
     text-align: left;
     margin-bottom: 30px;
     padding: 20px;
-    border: 2px solid #ddd;
     border-radius: 5px;
     background-color: #fff;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.project h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
 }
 
 /* About Me section styles */
