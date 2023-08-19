@@ -37,6 +37,35 @@
           }
         }
       }
+    },
+    {
+      "label": "npm: clean-dist folder",  // Updated label
+      "type": "shell",
+      "command": "npx rimraf dist",  // Using rimraf to remove the /dist folder
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "type": "npm",
+      "script": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "label": "npm run build",
+      "detail": "ng build",
+      "dependsOn": ["npm: clean-dist folder"]  // Adding dependency on the clean-dist task
+    },
+    {
+      "label": "Deploy to gh-pages",
+      "type": "shell",
+      "command": "npx ngh --dir=dist/chag-test-1", // Using ngh to deploy
+      "group": {
+        "kind": "build"
+      },
+      "dependsOn": ["npm run build"]
     }
   ]
 }
