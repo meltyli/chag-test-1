@@ -1,3 +1,8 @@
 main {
+    /* make sure the content is below the nav bar */
     padding-top: 64px;
+}
+
+.footer-message {
+    text-align: center;
 }
