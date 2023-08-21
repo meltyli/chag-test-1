@@ -1,6 +1,6 @@
 # Angular Web App
 
-Welcome to our Angular web app repository! This repository contains the source code and assets for our modern and interactive web application.
+Welcome to my Angular web app repository! This repository contains the source code and assets for my modern and interactive web application.
 
 ## Features
 
