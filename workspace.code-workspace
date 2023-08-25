@@ -1,0 +1,146 @@
+{
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "ng serve",
+				"type": "pwa-chrome",
+				"request": "launch",
+				"preLaunchTask": "npm: start",
+				"url": "http://localhost:4200/"
+			},
+			{
+				"name": "ng test",
+				"type": "chrome",
+				"request": "launch",
+				"preLaunchTask": "npm: test",
+				"url": "http://localhost:9876/debug.html"
+			}
+		],
+		"compounds": []
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "npm: start",
+				"type": "shell",
+				"command": "npm",
+				"args": [
+					"start"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}/portfolio"
+				},
+				"isBackground": true,
+				"presentation": {
+					"reveal": "always",
+					"panel": "dedicated"
+				},
+				"problemMatcher": {
+					"owner": "typescript",
+					"pattern": "$tsc",
+					"background": {
+						"activeOnStart": true,
+						"beginsPattern": {
+							"regexp": "(.*?)"
+						},
+						"endsPattern": {
+							"regexp": "bundle generation complete"
+						}
+					}
+				}
+			},
+			{
+				"label": "npm test",
+				"type": "shell",
+				"command": "npm",
+				"args": [
+					"test"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}/portfolio"
+				},
+				"isBackground": true,
+				"problemMatcher": {
+					"owner": "typescript",
+					"pattern": "$tsc",
+					"background": {
+						"activeOnStart": true,
+						"beginsPattern": {
+							"regexp": "(.*?)"
+						},
+						"endsPattern": {
+							"regexp": "bundle generation complete"
+						}
+					}
+				}
+			},
+			{
+				"label": "npm: clean-dist folder",
+				"type": "shell",
+				"command": "npx",
+				"args": [
+					"rimraf",
+					"dist"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}/portfolio"
+				},
+				"group": {
+					"kind": "none"
+				}
+			},
+			{
+				"label": "npm run build",
+				"type": "shell",
+				"command": "npm",
+				"args": [
+					"run",
+					"build"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}/portfolio"
+				},
+				"group": {
+					"kind": "build",
+					"isDefault": true
+				},
+				"problemMatcher": [],
+				"detail": "ng build",
+				"dependsOn": [
+					"npm: clean-dist folder"
+				]
+			},
+			{
+				"label": "Deploy to gh-pages",
+				"type": "shell",
+				"command": "npx",
+				"args": [
+					"ngh",
+					"--dir=dist/chag-test-1"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}/portfolio"
+				},
+				"group": {
+					"kind": "build"
+				},
+				"dependsOn": [
+					"npm run build"
+				]
+			}
+		]
+	},
+	"extensions": {
+		"recommendations": [
+			"angular.ng-template"
+		]
+	},
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
