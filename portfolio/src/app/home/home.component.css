@@ -30,6 +30,7 @@ section {
     padding: 100px 0;
     text-align: center;
     color: white;
+    overflow: auto; /* Add this line */
 }
 
 .short-section {
@@ -37,6 +38,7 @@ section {
     padding: 100px 0;
     text-align: center;
     color: white;
+    overflow: auto; /* Add this line */
 }
 
 .features {
