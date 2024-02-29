@@ -1,0 +1,68 @@
+.skills {
+    width: 80%;
+    margin: auto;
+}
+
+.skills h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills ul {
+    list-style: none;
+    columns: 2;
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.skills i {
+    margin-right: 10px;
+    font-size: 128px;
+}
+
+/* Styles for tablet */
+@media screen and (max-width: 1024px) {
+    .skills {
+        width: 90%;
+    }
+
+    .skills ul {
+        columns: 1;
+    }
+
+    .skills li {
+        font-size: 18px;
+    }
+
+    .skills i {
+        font-size: 96px;
+    }
+}
+
+/* Styles for mobile */
+@media screen and (max-width: 768px) {
+    .skills {
+        width: 100%;
+    }
+
+    .skills ul {
+        columns: 1;
+    }
+
+    .skills li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 20px;
+    }
+
+    .skills i {
+        order: 1;
+        margin-right: 10px;
+        font-size: 64px;
+    }
+}
