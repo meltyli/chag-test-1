@@ -1,6 +1,19 @@
-.skills {
+/* .skills {
     width: 80%;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills .skill {
+    flex: 1 0 45%;
+    margin-bottom: 20px;
+    font-size: 20px;
 }
 
 .skills h2 {
@@ -22,10 +35,10 @@
 .skills i {
     margin-right: 10px;
     font-size: 128px;
-}
+} */
 
 /* Styles for tablet */
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
     .skills {
         width: 90%;
     }
@@ -36,15 +49,15 @@
 
     .skills li {
         font-size: 18px;
-    }
+    }d
 
     .skills i {
         font-size: 96px;
     }
-}
+} */
 
 /* Styles for mobile */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .skills {
         width: 100%;
     }
@@ -65,4 +78,38 @@
         margin-right: 10px;
         font-size: 64px;
     }
+} */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+.skill-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill {
+    flex: 1;
+}
+
+.skill i {
+    font-size: 128px;
+    margin-right: 10px;
+}
+
+.icon-placeholder {
+    width: 128px;
+    height: 128px;
+    margin-right: 10px;
 }
