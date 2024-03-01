@@ -125,10 +125,12 @@ p {
     background-color: transparent;
 }
 
+
 .app-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 105vh;
+    /* 100% of the viewport height */
 }
 
 .main-content {
@@ -194,24 +196,26 @@ table {
 .max-width-container {
     max-width: 1280px;
     /* Adjust the maximum width as needed */
-    margin: auto auto;
+    margin: auto;
     /* Center the content horizontally */
 }
+
 
 /* Footer styles */
 footer {
     text-align: center;
-    padding: 30px;
-    width: 100%;
+    padding: 30px; 
 }
 
 .button {
     font-size: 1.2rem;
     margin: 1rem;
     display: inline-block;
-    padding: 10px 30px; /* Top and bottom padding of 10px, left and right padding of 30px */
+    padding: 10px 30px;
+    /* Top and bottom padding of 10px, left and right padding of 30px */
     border-radius: 5px;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
+    /* Remove underline */
     font-weight: bold;
 }
 

@@ -6,17 +6,29 @@ main {
 .nav {
     /* make sure the nav bar is always on top */
     /* position: fixed; */
-    width: 100%;
-    z-index: 1000;
-    margin-bottom: 250px;
     position: relative;
     z-index: 1000;
 }
 
 .main-content {
     margin-top: 20px;
+    /* display:flex; */
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
 }
 
-.footer-message {
-    text-align: center;
+.main-content {
+    display: flex;
+    justify-content: center; /* centers content horizontally */
+    flex-direction: column; /* stacks content vertically */
 }
+
+/*
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    width: 100%;
+} */
