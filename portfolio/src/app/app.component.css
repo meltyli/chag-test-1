@@ -3,6 +3,20 @@ main {
     padding-top: 64px;
 }
 
+.nav {
+    /* make sure the nav bar is always on top */
+    /* position: fixed; */
+    width: 100%;
+    z-index: 1000;
+    margin-bottom: 250px;
+    position: relative;
+    z-index: 1000;
+}
+
+.main-content {
+    margin-top: 20px;
+}
+
 .footer-message {
     text-align: center;
 }
