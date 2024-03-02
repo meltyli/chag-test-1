@@ -22,7 +22,17 @@ Feel free to explore my projects, get in touch, and connect with me. While this 
 
 You can reach me at my email: <melty.spam+site@outlook.com>
 
-Visit my personal website: [https://melty.com](https://melty.com)
+Visit my personal website: [https://melty.one](https://melty.one)
+
+## I think that there are dependencies
+
+```"dependencies": {
+    "@types/aos": "^3.0.4",
+    "aos": "^2.3.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }```
 
 ---
 
