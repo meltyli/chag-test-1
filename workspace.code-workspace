@@ -77,19 +77,20 @@
 				}
 			},
 			{
-				"label": "npm: clean-dist folder",
+				"label": "npm: clean-docs folder",
 				"type": "shell",
 				"command": "npx",
 				"args": [
 					"rimraf",
-					"dist"
+					"docs"
 				],
 				"options": {
 					"cwd": "${workspaceFolder}/portfolio"
 				},
 				"group": {
 					"kind": "none"
-				}
+				},
+				"problemMatcher": []
 			},
 			{
 				"label": "npm run build",
@@ -109,7 +110,7 @@
 				"problemMatcher": [],
 				"detail": "ng build",
 				"dependsOn": [
-					"npm: clean-dist folder"
+					"npm: clean-docs folder"
 				]
 			},
 			{
@@ -118,7 +119,7 @@
 				"command": "npx",
 				"args": [
 					"ngh",
-					"--dir=dist/chag-test-1"
+					"--dir=docs/chag-test-1"
 				],
 				"options": {
 					"cwd": "${workspaceFolder}/portfolio"
@@ -144,3 +145,7 @@
 	],
 	"settings": {}
 }
+
+
+// Prompt for gh pages
+// I have an angular website on the main branch. How can I publish this to github pages from my git repo that’s in vscode? Don't use deprecated functions or commands (like --prod)
