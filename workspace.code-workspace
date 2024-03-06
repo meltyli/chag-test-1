@@ -22,75 +22,71 @@
 	"tasks": {
 		"version": "2.0.0",
 		"tasks": [
+			// {
+			// 	"label": "npm: start",
+			// 	"type": "shell",
+			// 	"command": "npm",
+			// 	"args": [
+			// 		"start"
+			// 	],
+			// 	"options": {
+			// 		"cwd": "${workspaceFolder}/portfolio"
+			// 	},
+			// 	"isBackground": true,
+			// 	"presentation": {
+			// 		"reveal": "always",
+			// 		"panel": "dedicated"
+			// 	},
+			// 	"problemMatcher": {
+			// 		"owner": "typescript",
+			// 		"pattern": "$tsc",
+			// 		"background": {
+			// 			"activeOnStart": true,
+			// 			"beginsPattern": {
+			// 				"regexp": "(.*?)"
+			// 			},
+			// 			"endsPattern": {
+			// 				"regexp": "bundle generation complete"
+			// 			}
+			// 		}
+			// 	}
+			// },
+			// {
+			// 	"label": "npm test",
+			// 	"type": "shell",
+			// 	"command": "npm",
+			// 	"args": [
+			// 		"test"
+			// 	],
+			// 	"options": {
+			// 		"cwd": "${workspaceFolder}/portfolio"
+			// 	},
+			// 	"isBackground": true,
+			// 	"problemMatcher": {
+			// 		"owner": "typescript",
+			// 		"pattern": "$tsc",
+			// 		"background": {
+			// 			"activeOnStart": true,
+			// 			"beginsPattern": {
+			// 				"regexp": "(.*?)"
+			// 			},
+			// 			"endsPattern": {
+			// 				"regexp": "bundle generation complete"
+			// 			}
+			// 		}
+			// 	}
+			// },
 			{
-				"label": "npm: start",
-				"type": "shell",
-				"command": "npm",
-				"args": [
-					"start"
-				],
-				"options": {
-					"cwd": "${workspaceFolder}/portfolio"
-				},
-				"isBackground": true,
-				"presentation": {
-					"reveal": "always",
-					"panel": "dedicated"
-				},
-				"problemMatcher": {
-					"owner": "typescript",
-					"pattern": "$tsc",
-					"background": {
-						"activeOnStart": true,
-						"beginsPattern": {
-							"regexp": "(.*?)"
-						},
-						"endsPattern": {
-							"regexp": "bundle generation complete"
-						}
-					}
-				}
-			},
-			{
-				"label": "npm test",
-				"type": "shell",
-				"command": "npm",
-				"args": [
-					"test"
-				],
-				"options": {
-					"cwd": "${workspaceFolder}/portfolio"
-				},
-				"isBackground": true,
-				"problemMatcher": {
-					"owner": "typescript",
-					"pattern": "$tsc",
-					"background": {
-						"activeOnStart": true,
-						"beginsPattern": {
-							"regexp": "(.*?)"
-						},
-						"endsPattern": {
-							"regexp": "bundle generation complete"
-						}
-					}
-				}
-			},
-			{
-				"label": "npm: clean-docs folder",
+				"label": "clean-docs folder",
 				"type": "shell",
 				"command": "npx",
 				"args": [
 					"rimraf",
-					"../docs"
+					"docs"
 				],
 				"options": {
-					"cwd": "${workspaceFolder}/portfolio"
-				},
-				"group": {
-					"kind": "none"
-				},
-				"problemMatcher": []
+					"cwd": "${workspaceFolder}"
+				}
 			},
 			{
 				"label": "npm run build",
@@ -110,25 +106,41 @@
 				"problemMatcher": [],
 				"detail": "ng build",
 				"dependsOn": [
-					"npm: clean-docs folder"
+					"make cname"
 				]
 			},
+			// {
+			// 	"label": "Deploy to gh-pages",
+			// 	"type": "shell",
+			// 	"command": "npx",
+			// 	"args": [
+			// 		"ngh",
+			// 		"--dir=docs"
+			// 	],
+			// 	"options": {
+			// 		"cwd": "${workspaceFolder}"
+			// 	},
+			// 	"group": {
+			// 		"kind": "build"
+			// 	},
+			// 	"dependsOn": [
+			// 		"npm run build"
+			// 	]
+			// },
 			{
-				"label": "Deploy to gh-pages",
+				"label": "make run cname",
 				"type": "shell",
-				"command": "npx",
-				"args": [
-					"ngh",
-					"--dir=../docs"
-				],
+				"command": "mkdir -p docs && echo 'melty.one' > docs/CNAME",
 				"options": {
-					"cwd": "${workspaceFolder}/portfolio"
+					"cwd": "${workspaceFolder}"
 				},
+				"problemMatcher": [],
 				"group": {
 					"kind": "build"
 				},
+				"detail": "Create CNAME file for github pages domain",
 				"dependsOn": [
-					"npm run build"
+					"clean-docs folder"
 				]
 			}
 		]
