@@ -82,7 +82,7 @@
 				"command": "npx",
 				"args": [
 					"rimraf",
-					"docs"
+					"../docs"
 				],
 				"options": {
 					"cwd": "${workspaceFolder}/portfolio"
@@ -119,7 +119,7 @@
 				"command": "npx",
 				"args": [
 					"ngh",
-					"--dir=docs/chag-test-1"
+					"--dir=../docs"
 				],
 				"options": {
 					"cwd": "${workspaceFolder}/portfolio"
