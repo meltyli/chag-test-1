@@ -89,6 +89,22 @@
 				}
 			},
 			{
+				"label": "make cname",
+				"type": "shell",
+				"command": "mkdir -p docs && echo 'melty.one' > docs/CNAME",
+				"options": {
+					"cwd": "${workspaceFolder}"
+				},
+				"problemMatcher": [],
+				"group": {
+					"kind": "build"
+				},
+				"detail": "Create CNAME file for github pages domain",
+				"dependsOn": [
+					"clean-docs folder"
+				]
+			},
+			{
 				"label": "npm run build",
 				"type": "shell",
 				"command": "npm",
@@ -108,7 +124,7 @@
 				"dependsOn": [
 					"make cname"
 				]
-			},
+			}
 			// {
 			// 	"label": "Deploy to gh-pages",
 			// 	"type": "shell",
@@ -127,22 +143,6 @@
 			// 		"npm run build"
 			// 	]
 			// },
-			{
-				"label": "make run cname",
-				"type": "shell",
-				"command": "mkdir -p docs && echo 'melty.one' > docs/CNAME",
-				"options": {
-					"cwd": "${workspaceFolder}"
-				},
-				"problemMatcher": [],
-				"group": {
-					"kind": "build"
-				},
-				"detail": "Create CNAME file for github pages domain",
-				"dependsOn": [
-					"clean-docs folder"
-				]
-			}
 		]
 	},
 	"extensions": {
