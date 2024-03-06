@@ -44,3 +44,4 @@ Thumbs.db
 # user defined
 /portfolio/src/app/test/
 /portfolio/src/app/test/*
+!portfolio/docs/chag-test-1/*

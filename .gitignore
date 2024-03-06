@@ -45,3 +45,4 @@ Thumbs.db
 portfolio/src/app/test/
 # portfolio/src/app/test/*
 # portfolio/src/app/test/main.html
+!portfolio/docs/chag-test-1/*
