@@ -101,7 +101,7 @@
 				},
 				"detail": "Create CNAME file for github pages domain",
 				"dependsOn": [
-					"clean-docs folder"
+					"npm run build"
 				]
 			},
 			{
@@ -120,10 +120,7 @@
 					"isDefault": true
 				},
 				"problemMatcher": [],
-				"detail": "ng build",
-				"dependsOn": [
-					"make cname"
-				]
+				"detail": "ng build"
 			}
 			// {
 			// 	"label": "Deploy to gh-pages",
