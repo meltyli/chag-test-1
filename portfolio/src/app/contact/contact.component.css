@@ -33,6 +33,10 @@ body {
     padding: 0;
 }
 
+.indent-contact-element {
+    margin-left: 2em;
+}
+
 .contact-info ul li {
     margin-bottom: 10px;
 }

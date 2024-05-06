@@ -150,6 +150,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "portfolio/src"
 		}
 	],
 	"settings": {}
